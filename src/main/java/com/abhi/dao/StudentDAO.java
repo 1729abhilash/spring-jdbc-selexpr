@@ -3,6 +3,7 @@ package com.abhi.dao;
 import com.abhi.api.Student;
 
 import java.util.List;
+import java.util.Map;
 
 public interface StudentDAO {
 
@@ -13,6 +14,8 @@ public interface StudentDAO {
     List<Student>findAllStudents();
     void cleanUp();
     Student findStudentByRollNo(int rollNo);
-
-
+    List<Student> findStudentByName(String name);
+     Map<String,List<String>> groupStudentByAddress();
+    int updateStudent(Student student);
+    int updateStudent(List<Student> studentList);
 }
